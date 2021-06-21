@@ -1,6 +1,6 @@
 ## OSINT-JUMP
 
-在线安装 [Greasy Fork](https://greasyfork.org/zh-CN/scripts/387060-osint-jump)
+在线安装 [Greasy Fork](https://greasyfork.org/zh-CN/scripts/387060-osint-jump) （已失效）
 
 ### 简介
 
