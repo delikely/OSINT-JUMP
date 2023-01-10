@@ -4,7 +4,7 @@
 // @description    开源情报收集的导航站，方便在各搜索引擎之间跳转。
 // @version        0.0.5
 // @created        2019-05-04
-// @lastUpdated    2022-03-24
+// @lastUpdated    2023-01-10
 // @original-script https://github.com/qxinGitHub/searchEngineJump
 // @original-author qxinGitHub
 
@@ -765,6 +765,10 @@
                 url: 'http://wenku.baidu.com/search?word=%s&ie=utf-8',
                 favicon: icon.baidu,
             },{
+                name: '中国专利',
+                url: 'http://epub.cnipa.gov.cn/Dxb/IndexQuery',
+                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEVHcEz8y0nyuTjxt0a8Myv0zVfmpEjTu5PKCBv90139zEP94pDtrjr5zlbSUzrpLy7+zFj+zFfuLCX7yDvvISPtGSH/3FLzx0Hlcyv81knrCCDQBA/gSybwHST+1D330ljXGBfyfj7ZUyXxnjzVaiXzrjvSjS/uSSnnojbcFBvdhzLWfjDLWiXlIyTzjEHdPSbrjzDXmi/Xmy9qBE0iAAAAEnRSTlMA6eNsRfwYB4F89BTrsTNOYV7eaQERAAAAxElEQVQYlT2PWRKCQAxEEUEWRTQZZmEA2UFQXO5/ODNo+X5S6XQqacsyeOcgOO2tPxEqAiPv23ph8a4fj/pV4Ne04bcUxh7SG3dNH/CZybxtc8lmHhiDuELGAFgGVxGSgH0OTGaZZJD36Fk7nGicEGSacEeOMYGkWpaKyoi0Yot7ChcC0ruwSdii4FwVheJc4NbcPTTdMFTVMHTNYX3sqJ9do1TTPfVxFeJS61bKVusyXgWnrF0phHTr0vml8x2fcHyT9gOeXRJl46mrwgAAAABJRU5ErkJggg=='
+            },{
                 name: '豆丁文档',
                 url: 'http://www.docin.com/search.do?searchcat=2&searchType_banner=p&nkey=%s',
                 favicon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACsklEQVQ4jZ3SWUgTcBwH8H+QeDCpLUXR2vKGyZzHFuq8ErMi1PBK01LSBKdplgeYCPWQZWFgGV2GQhbpQ4XNSs3l0XRTZ+pm6hRiTtnmXOKZZfv2EstSevD3/P18H778CNnmOfmYHSSE7NquJylVjq1O3pTQbWH3Y7YpZcNBhn1uFpz/5SzNdhOGOZXQTa2Ji60XJdgr3ibndBWjtXKSi7Ju33lCCHWTsnY28Uoud3tyo5Oruv/Jb/VO/4Hlsj7Pn8VSD5SM+KB83Ae3J5lIr2Z2bcLc41YZtYrAtc7FaPTqz6JPx4dkNg3CmRjUjnFRKHZFUgcb2SNchJ13ufUXZvJMj76a8YfmRwOWvg9ANlcE2VwhZPqLGNJloXM6ETWjQeB3s5Eg9Qcz1D5uozcpf+0+Il6IhELfhKn5z5BqL6BPm4ZeTSrE6kQIp6LwXBGJq4P+yO7mGWh0mrtRO3ma8xpVAeiYiYZcVwOFXoCB2TyoV5qhXHwG3eoHKBcFqFdE4NqwF3JbuF8pFIq1sSD0BDWzeS4EzcrD0K/JAAASdS4AYG19HdolFQCgS12BkgF7ZApYGkIIzVgQdoqW16jh4eUkD+plMdYNK2hTpQIAZLoGNCjifxfcQ26PHfhNbL2lJbH6M2CgRVTtBAvVI87QrkoAAIIvcQCAIV0d6sajAABC1SOc6WCAX++tIITs3Dgi7fJbx/kK+V50Td+FfFaIx6MHMarrxouJK7gpDYdcK8HDwUvg97ERUeBSuekHAk7uKbo+xkKByAH5H+koFrsgt8sBWe1uyGhlIaHRFSltbOQLgxaodub0rV53R2yp3dNSOReZIi5S33OQ9I6D2CYOYgTeSBP5oUh06Jt7kE3kVth4wcmMgrw3Icr8/iPI6Q9HVk8gzrUHGNIfhLTs97Dx/Tf/C0aUi3kge/guAAAAAElFTkSuQmCC',
@@ -882,7 +886,11 @@
 
         //资产-域名/IP/Port
         engineList.property = [
-            {
+			{
+                name: 'MS Defender TI',
+                url: 'https://ti.defender.microsoft.com/search/data/subdomains?query=%s',
+                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKeSURBVHgBbVNNaxNBGH7mIzZJt7gJglUa2qLSg4IfIIgXWwTpwYM/wIsnUSr15kX8KN48CdVLEat49CJeFauoN0Wh4EfRdq3axmqzbUyyu7M74zubtLTagTczszPPM8/zvm8YNhhD06rfybLLec768xxoE2yiXtfjF7rk3X/vsrWbwSkCcgw7EidynCFL4LxozmhEmHhfG0+4uDFxrPB2laD/Q3DegA0zzlxm4GYImCOABeVSAo4sHdj9bDmCt6AIZvwk0T40uyJh2D4meA+MgaGjSBvEGqiGIaTSKbBYzIPsQIgEcRhBa+2axLgmTnolrDxjVm343gK8Fx/TGYw3PxqNzp4t2HO4D1HNbjWRkG6aJeg1S6LIY3W2iskHL0kUS8GZNgkVxul63lvE4vwb9B3aTe8Z6EQTgYEk4UtxXeH3DFGLLKSTg6oF2L6jEwcHD+BH+Q9eP3wFrWLITRIxPWQVUA5gvZIzVlmcayBIJKLYwOnalqoWTju8Xwo/GxKiPZ9+czZ3kIUQYS00qh4hopBTjyefJ8USuCBPlO1cdwlLX2YxN/UdfsMQIIDylyGFwCbOyWpICgyzFuj3GXPvVFwh4mnGjcvJu7XfmPmK6qfP69qkWCwgm8u1EkjgxHjl60d6uX+q4FO1RhTJj1ohSyXkd+1Ms8+IsSPvQDBB0gMrPw0VqKtWcusJw7Jj8/fo8kmrgtsi2JMwAJ8rg1eWYSKVlg4UhpnR5bHj59a38i2vIHnmKZHsTatoq0tMNuyaUWOlxNDv/NPd+9OENTugNc52V2KtBlSsHylF3ZhQV5K3NKhckcwgEpn7poMNrID/+zM13ZCtm+URxvRFs+YCY/yaPrP10lrwxgQrY/TbUerA27TyKJkjGOp6stG1vzp/TqrFcAg2AAAAAElFTkSuQmCC'
+            },{
                 name: 'Riskiq',
                 url: 'https://community.riskiq.com/api/dns/passive/subdomains?query=%s',
                 favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAdZJREFUOI19kz9oE1Ecxz/vxV6MpskgOFmXXBUEB8HBoXZWEBcX/6RpItTJwVVwFiFD1VFqL7mIYFEnFcHJZtDJQS3Su3cpIqIOgqZaLyl3zyExl9jrfaff+74v3+/3B+9BEhrKx/YeJElELLuwOoMhr2Nk9tH1A+A5JfNUYtgAdfUBW70d4RbdKrb6huXcjG9QV0207iDlQfywyKXJl7HmNfUYwVFgDWgxa1YklrvEruwUUuxlpjCBIapDbZosqqsAWO5tBD6z5n6yuWkE5aiB7bUpFXLUnHvk91yg/eMV6ADDmGKz+wWtPYQ4DOQpmYKaeoJGUTGv7Ogv8h2A8oEiUByqvEzZnI7Ozq3+5CNYB+gZaC1jd5ZibDBb6gQw3gvUghAZGWyH3bljNLxPiLBBKC5jpMeBi8OSfyuEsQa/f76n051j7tBrFpyPBBuF/k0AOoiEtvK5s3pyi0FNLcca19031NV9AInlPiKTTZNOVbcIJcexvaURbk3nyOaPkEqd60kqk2fY+PUCaNHwPnPXOTsQa+0RhF+jZPWMZusd6+2HdDevxbbDdlew3ZURznLm+095/n/5Np/JPc+YuMHOzASdPyGIp5QKp+MTk9BQPrab+J3/AlVirIzEzHGpAAAAAElFTkSuQmCC'
@@ -893,7 +901,7 @@
             },{
                 name: '高精度IP地址查询',
                 url: 'https://www.chaipip.com/aiwen.html',
-                favicon: 'data:image/jpeg;base64,AAABAAEAEBAgAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0sXZo2pM9SgwDr/nLs4/5y8OP+bujf/krAz/3GJKMosNQ9XAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAEKcocssLbaP/+fwS7/ka4z/46sLv+KqSb/jast/5KwNf+YuDb/mbk2/1JjHZwAAAABAAAAAAAAAAAAAAABdIkstrnePf+/13H/2uO8/6K7Uf+1yHT/2+W9/7DFbf+Lqij/kK0z/5GvM/+evzf/UWIcnAAAAAAAAAAARVIbb73fSf+kxzH/z+GS//////+rwmL/ydic///////D05D/iKci/5GuNP+QrTP/ka8z/5m6Nv8pMg5TBQYCDJm0POi01Uf/pMYz/83gjf//////qsFf/8fWlf//////vc6E/4KkF/+Mqyv/j6ww/5CtM/+YuDb/cYgn0S42Eku32En/rsxF/6XHNP/N4I7//////6rBYP/H1pb//////9Dcp/+mvln/pb1Y/5SwOf+KqSb/ka8z/5KwM/9QXiB7vN5L/67MRf+myDX/zuCP//////+rwWH/x9aW///////////////////////x9ef/us2A/4uqKf+bujf/XG0lh73eTP+uzUb/p8g1/87gj///////rMFi/8fWlv//////5O7C/8zfi//Y56j//f75//////+ov13/lrct/1NhIn693k3/rsxH/6fJN//N4Iz//P34/6vBYP/I1pf//////8ndhf+Zvxn/mb8Z/83gkP//////w9KR/5a4Kf8zPBVTu9tN/6/NSP+sy0D/vNVm/9Pkmf+fuUX/y9if///////Q4ZT/psg2/6/NSv/i7b///////8DRhf+gwy3/CQoEEaK9Q/C21Uv/qMg3/9Hilv//////r8Nn/87coP////////////z9+P///////////+/03/+01Er/iqYu2wAAAABSYCOBwuRR/6zMQf++1mn/1OSe/7LNVv+/123/0+Oa/9PknP/U5J7/0+Sc/87gkP+wzk3/tto8/zxHF2MAAAAAAwMBB4adOMrC41L/rcxC/6jIOP+uzUT/q8s+/6fINf+mxzT/pccz/6TGMv+kxzL/u99C/3CFK7IAAAAAAAAAAAAAAAALDQUXh545x8LjUf+21Uz/r81I/67NR/+uzUb/rcxF/63MRP+11Ub/vd9J/3WLLbQEBQEKAAAAAAAAAAAAAAAAAAAAAAEBAAZWZCSCor5D6bvcTf++3k7/vd5N/73eTP+42En/mrU94EhVHHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkKBBI0PRZRU2EifFxsJYZQXiB4LzcTSgQFAgwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=='
+                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADDklEQVQ4jW2TTWhcZRSGn+/77vzcO3eaTKZkTKc/UZKijlGwJgptLIjWRbWxSF0INUhRF0LdSikIuhAXKgpdKERcVY2hFMESKRaNiLYJNampTbHJNJO20+mQTGfmZn5y79zPxSSxRc/mvIvzvBx4zxH8TxmW2da2I7Xb7tqWUhHTcktOqXw5faFw/uKY73rOnbPiLlKIYNehA0e3vfzcG9bWjnYhFRqNBhorLs5sZj795YlPr307+tF/DALRSOKxT46evOeZnU+4JQevVl+HtW52aYZRVphrI6PfTx/5+CXtehUFIJQK9R575/SmPbseL+byFGtVDKWo+w3Knku14VH1PSq1KsvLDvG+R7Zb8djD+TO/f2UA3Hdw4EjHs7t6Czdvcb/VRu+GdkZzcyTsGD32RqQAicBH43guPy5liB3Y83xibOKQYVhmrPPgC2+tFB0qnkePHefVZIqz6b/Z0dLC4OaHAKj7DUJSATCw8V7evPoricF9b8vYow8+ZW3taGnU6pjKYLKc5/Pr08xVbqO9BgDHMlM8OT7M3vMn+Wlpgc5IKzsbNnpLe5eMdnemUBKtNVXfZXskxmDHAyTDNjW/aVD06ixUy/xRusVUOQ+ALRTecgVD2aapAS3A16AQhKRCIlYzgP5YkqBUbAnb7E90AzCxeB1Dg+EWHUej0RpYBZrqX90fS9IfSwJws1Lis5mzTOQX2NDailGamZv0V9wmpPU6eKfB17NTfJf5C6018+UCi/UK0WAIr1JF3p689HP5SiYnzeD6waztsqZnS4ucuXGFP5eyVD2XqBFEmSGcmfQF6a+4TvqLkfelZeILCAgJgBKCkGxqOxAkooKYKoASguZhCLLDo+8qgPKluXPhTe19LX093VbNxai5jOWu4mswpOC33DzzTqFpLgVGa5Qbx08N5U/98sH6LwjDsFLvHT4ef/HpgUI2R2CxhOs3qDU8QlIRDgQQ4SAIQXb4h6GFoROvrYZ3dyX27n598yv7DocS8ZTveiBA+xqvUmX5cno8O3L6w+L49Ddr8/8AO2RU5OYPBdAAAAAASUVORK5CYII='
             },{
                 name: 'Dnsdumpster',
                 url: 'https://dnsdumpster.com/',
@@ -935,10 +943,6 @@
                 url: 'http://web.archive.org/web/*/%s',
                 favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAA3NCSVQICAjb4U/gAAABWUlEQVQokX1RQarCMBCdGaXWqvfwDLpyI+gFvIfeQnDlLbyAeACLBxAXdi0IXUSFlpY0mb+YkJ9f4b9FGF7mvcybICICgD+NMfAXRMTMUqOAiHzfYrGYzWbz+TzLssvlstvtvNKbIjNvNpvxeDyZTOq6bprGGENEiBjHcZ7np9Npu926blHfbreyLK218AVETJJktVpdr1dE7MoLh8OhqqrhcFiWJTMnSVJVVdM0o9GoKIooip7P528mANjv94/HAwDSNE3TVBillDDn81k6EbErGxBXKcTIWutrzwCAW5m1thXAC1o8facMR/XbbAtCttXRYkicmDn88jCMr11oGVEplec5ALxeL7lWSn0+HwB4v99haPfTx+OxKIp+v1/XNTPHcay11loL0+v11uv1/X53a10ul1mWGWP8YCGYudPpTKdTJ5BXBoOB1rqVLwwWRZEL8235D4joB1rD3NJ+rOl5AAAAAElFTkSuQmCC'
             },{
-                name: 'Spyse',
-                url: ' https://spyse.com/target/ip/%s',
-                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAAnNCSVQICFXsRgQAAAACYktHRAAAqo0jMgAAAOFJREFUKJF10DEvA2Ecx/HPaVND1REkFnJnsDQGk7WJN2CoSRi9A7tB4m14C2I1SmxiskhONDQxkGoIDckZtL1ene/0PP98n39+vyeIkiD2L2kSxOngUrZqWsmnNx1PwykoObBtdvjySjMv7NrXduhOYM68L/LCOk6cFaSYyI4fhTH7wj22rAlVx4R+iwWnFvujnlvHLvMCVU2Riil1K7oaOnkho+zcsj0X4yEHfHtA7W+LjBq6w32gYdOjtmdlG+peXeeF2M7IhhtH3vMtKmaEQpN6XiSj/xC1gqWiHL+krR+7ADD5urP8OQAAAABJRU5ErkJggg=='
-            },{
                 name: '百度云观测',
                 url: ' http://ce.baidu.com/index/getRelatedSites?site_address=%s',
                 favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAhpJREFUOI2dk81LVGEUxn/ve++dOxe7M+MMgWIOEVo2FSG20SiJiog2EUTrslkWQUT+A5EQtLJFUYtAaNWiFtFGQqgM/CYTlcL8yDF0xmmuzofO3LdFQzpaYj2rs3iec36H876CLnW+tZIndSITLCi2JU3AqLISbTFaaB1XcfWfujWm4rJOZILbm7tZB2QmqP8NeyqreP99hXzBpcLWObXT2OQpKND/FL452Mf9CcBbBR4LUmkwJSPHfOy3tRLvpgZ3Bx/xci5J/4ko9YFyAFaBy73LRDqXmDjjZ7e15pfrwwvpCfpjd3jVeOF3GMAAntYvs3ByGLLdKJVfIxDFIqdgZrGXiBWn1l9TQrWY+cJ0sptsfoHJ5Btej49wpeEtUgSQuoAhp8CQA3kFZWJ5w1IK26ziUMVFAvY1zta9IGQ18PzjJTyaifRIwcOZHD4NakOHcVZgNtW3roFAl16EMJl0fpArQENVlKlkF1KAlAIGHJfO+Sx+ay9Hd0XpGDjCbKq/hGM44VJm2IS88GG6nXCgGVeB6PicVnvKDZp6HJpDBvW2l0j6Bt/iD7DNX2EnB4YEISCTB58J15tiPPsaRM+50BjUmTzu5938KqbmsiPUzuma2zhLPeTyK4jisRQKj25ysPIcEgNXZdC14hnCliQcNtdBV4NdvfGZlEgTIEeVldjStYU+uVZCb4txVcDjff/4nceUlbg3R8tPFQz1VtE1gGoAAAAASUVORK5CYII='
@@ -949,7 +953,7 @@
             },{
                 name: 'RapidDNS',
                 url: 'https://rapiddns.io/subdomain/%s#result',
-                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAABJ0AAASdAHeZh94AAAAEXRFWHRTb2Z0d2FyZQBTbmlwYXN0ZV0Xzt0AAAaaSURBVEiJtVZLjx5XEa269/bt7ttff4+Z8TyMPXEgCokh2QSxQCQrBAtWSEj8ApaIdRas+A1s2SEk/gA7JCQWQUIoJkaCSBYhspgZ2zPfs7vvq6pYfOOxQzzmIVG7bumec+tU1a2DVVNrbZrSLpaLtp2yKBEAAEYAABBhlsm4Dn1PLEPwAMDEQszCzAwAsj1wTeiybKrCnF9cEEkIoR05ApU5CZJBVGgKo6Lva9dW9ajvg0JEBaIAANTlHQQRryUYNW3KEUCIGAD8MHzjvW+/+953bt48BoGmrnd2dm/cOHBNvd7MlTLMSJSVQkQAuUR/CQe241nfzcuqHPqACFopZUpXj5hTYa1r2xhj3w/Ht+/s7h9yTo/OPlXK/u2TB0IEzETEzMy8pXlBBilFEamrMsakFKJSmRMRE7ExegghhADAOZP33Z/v/WF+fj5yzTe/9d3V8mKzXADgFvq6SmgQAYDGOSLSWhfGAAIga210WTWurapaKYOSVosng/fMktKwPD85uvXaen2RYhQBEVFKXUOwLdRWL8SccyJSStWj6WQyK4xerpZlaSiFvu9FAMFkCgCyXK5Gk6kfvFAm4uvKcElgjEFUKUUAKIrKlM3u3r7RijLHkJqmXm82GrEq9diWax9QwfHxa81sdzSZUApHh7fn8/MXZnCZF1EW4cIYrVVVNaUtKabNerNarRAR0VSlG1L42U9/cvqbH9/enx0cHE/G0/2dQ478ypff/tJbX/vhj95//c2vXpsBM1RVVRRFVbXK6kKXewdHiBCGoXT1ar0UTij0q1//7sFjf9bV73z93Q8++O39D3/fr1fTyS6guriYHx7eufuVtxrnTk4eXhF8RrX9/cPIkoKvXAvWNsY8OjsTxMaVRkHXb5RWwma6M805SNbed123srYorRVQbjT+4qtvfP97Pxj65S9++fP79z96lgEAKKVCGCiRLkzdznZ29gREKYxhEI7EZIxmytqo5EPf91VZMuJ4sgeCAiKchm499IsY+77f3L17908f3UspPSMQEWZuxxMsyunujXYytbbo1guibAtMMSECs6TgU0o5BQAw2tq6rpyL/QAoIuK9/+vHf7n34R9j8svV2nt/SXDZYaia8c54NBlNpt16PqosIwKn7GMIHoBySkScM5W2zDm1k92yKp88OlVIqA0qZYtyb2/H1hPfL88ePXnWRU+btRCEHH23Xri2IeEYY4yJmLQxLACAOYPWRcpJaWXLcnlxbhRkJj/4zXqzWMwfP3n8zpu3W2c/00WIqBTWbSsogGirKiTvRiMjuFjMlZJN17FATrztDNe0O7s3vO8EsohQ5hQDAIhADMmn+PYbr3/84FMB0Vqr7RBqrWvXSgqgMMSgiCARgCznFyJkrWHi0agZt+O6dovlRc7ZuYYz55xyTiAsIlobQGka11bl48U6xKirqso5A4C1ljkBsuQkTEIxBprPz2KMANA0TdNUwzCsu06huXl0qyjqGGPfbZi5KIoYk7VlShGR92fTh/846YeQiTRRVkoZY5xzKSWiDJyVMoWpve+69RJAisL2fdd1fduOnWvr2g1D74e+rqvajWIIMaacU1mWMYZX7rx68/btnNPZ4wsAwMKWmVKhDSLmFABRUNpmlnNOyRujq6oSyJv1cOv4zmJ+YWzBWUIc9nZuDD6cnz9hoXbUClMIg2uqnEmhmk1nn/z9IQDooqiZ0/atzkQAUFfO+8F7j0oQFRFRloODw7PTU611XTtmqev69OSkKitEJMpaKe+9Mabv++AzAAjIMAQAUMTe2MIY87SbdIwppYwICrVSOqW8v394fn6utR41o/n5BYKsFksRqeuy7zYKsNt0KWXvo8ICQJWVFbkcAF25EREzUc5ZRIwxKaXt5CEiEe/v75+entZ1jYje+xCCtXa5XBpjVqsVEW13mVJKay3CztXWFqtlt/UcUI93bFkjIiIWRfH8YCPibDZDgIODA+fcbDYDgOl0enk1rZ8OkNJaW2udc3VtR6MG8dn8Gok+Rb+9RUrp6mECQNe4+Xx+dHTUdX2MuSwrbcwWGhGvTNHVNs45IwJzfH49qxCGz+9rAShKI6AOj75Qu1EmMrYARADZanKlzFVs7QUR/wvYi82MtVYb41zNLCmnGIIxJqecczSmjDFsxXm5p7tU8vO/tsUojPHe+77fSrf1AyKXqvxb3Gsz2FYMAIgIALTW29y11sz8X0G/IJ73NttG2pJtP19iQP8j0P8d4uVxBfp/QQf4J3e3KagPw0wGAAAAAElFTkSuQmCC'
+                favicon: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Ix8/RD84QzQ5OjcBCgoKDQwNDgwPDisZHx03Nzc3KzcrNzcrKysrNzc3NzcrKysrNysrNzcrNys3NysrKys3Nys3NysrKzcrKysrK//AABEIABAAEAMBIgACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAADBAcC/8QAIBAAAgIBAwUAAAAAAAAAAAAAAQIDEQAEMVESITJx0f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCPaU1G7yeIaioAJHq8HqIYSjSROysKPQV3B4+YuJCjEkG+OMyZHa7J774H/9k='
             }
         ];
 
@@ -1022,6 +1026,10 @@
         //漏洞库
         engineList.exploit = [
             {
+                name: 'OpenCVE',
+                url: 'https://www.opencve.io/cve?tag=&cvss=&search=%s',
+                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAS1BMVEUrQEn///8qP0g7TlYvQ0w1SFEnPEZBU1uVoKRba3KjrLCfqKxufIKRm6DX2934+flndn1RYmrt7+9LXWXL0NKqsrXi5OaJlJnDycsgxhRrAAAAXklEQVQYlZ2MyQ6AIAxESyllcQERl///UtEEEQ8enGQO72VagJ/Bq1RZEbM2Fosg1/XD6AOXwRRFjrdFcPCniDO2i6Tqj2VNXmw3A0pt4y6rACTj9IPzkYSG4Y1fOQBC1QJWxxooxAAAAABJRU5ErkJggg=='
+            },{
                 name: 'CVE Name',
                 url: 'http://cve.mitre.org/cgi-bin/cvename.cgi?name=%s',
                 favicon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAA3NCSVQICAjb4U/gAAACN0lEQVQokZVRTUwTYRCd+fYrSyoIRVoBaSlETVraBqMRsiQelIMmXpCbCPEiBy8evBoTvfkTPYIhXIyReMJEg1wrElAMkIgQSQX6S2ihpfZ3t7s7HrbaeJN3mEnezJvMzEMigsOAHaobALiRiHTSVU1HExcAjSmk6xoRITIgAgJCEARuCHQ18UkJvNDAvNd867jjHBMYAZTWny9tlbqOBYB0jWhFvdF7oY8DgJbdii48nVqg1mbtbPuzED10dpwGraQlP69+M9W17xFAdF9NNSbLK6mRd6/mzErVqUK6ulZvq4v+tDtPUmYjtvtLre/fb+nM5nKsHntcLkTkRHoosDzzMXjv/s1CsTA9NTbQ15Z2n6/Jb6zvcE+XV5J6EBHLhwEnUmOJzODQ8NjoKOd8eOCiRfAHQyEXX82qNRK+3vZ/OOq5Y7XZ/ryVgKFgsdSLoliUi0ca3U4b395cp/R3RdH17OaXpbV4PF55KzLeZDU/eDJ+fWhQKanjEy99txtY0r/DkgdVl+fyDtEJLSda/wqQiIprj2ZWxOAucJPpmmSKh5cbWHAtLFR33pUkCQgEzhljFadZ05Vu29feMw3uprgSm/4R4421kCyIXpgoLY7IiyPv376RZbnitMniUWq7HQeTOUGbnLdeutq/GX6czmMkGgPARFpPiHlVVUVRLK8EAHJJnp+dDYbCHp/P6/FEItFU6gCIMtkMAHZ0tNvtdkSsCACAiDRNEwTBKBi8ERHRIP8R/Cd+A23CD2FPe0a0AAAAAElFTkSuQmCC'
@@ -1029,6 +1037,10 @@
                 name: 'CVE Keyword',
                 url: 'https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=%s',
                 favicon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAA3NCSVQICAjb4U/gAAACN0lEQVQokZVRTUwTYRCd+fYrSyoIRVoBaSlETVraBqMRsiQelIMmXpCbCPEiBy8evBoTvfkTPYIhXIyReMJEg1wrElAMkIgQSQX6S2ihpfZ3t7s7HrbaeJN3mEnezJvMzEMigsOAHaobALiRiHTSVU1HExcAjSmk6xoRITIgAgJCEARuCHQ18UkJvNDAvNd867jjHBMYAZTWny9tlbqOBYB0jWhFvdF7oY8DgJbdii48nVqg1mbtbPuzED10dpwGraQlP69+M9W17xFAdF9NNSbLK6mRd6/mzErVqUK6ulZvq4v+tDtPUmYjtvtLre/fb+nM5nKsHntcLkTkRHoosDzzMXjv/s1CsTA9NTbQ15Z2n6/Jb6zvcE+XV5J6EBHLhwEnUmOJzODQ8NjoKOd8eOCiRfAHQyEXX82qNRK+3vZ/OOq5Y7XZ/ryVgKFgsdSLoliUi0ca3U4b395cp/R3RdH17OaXpbV4PF55KzLeZDU/eDJ+fWhQKanjEy99txtY0r/DkgdVl+fyDtEJLSda/wqQiIprj2ZWxOAucJPpmmSKh5cbWHAtLFR33pUkCQgEzhljFadZ05Vu29feMw3uprgSm/4R4421kCyIXpgoLY7IiyPv376RZbnitMniUWq7HQeTOUGbnLdeutq/GX6czmMkGgPARFpPiHlVVUVRLK8EAHJJnp+dDYbCHp/P6/FEItFU6gCIMtkMAHZ0tNvtdkSsCACAiDRNEwTBKBi8ERHRIP8R/Cd+A23CD2FPe0a0AAAAAElFTkSuQmCC'
+            },{
+                name: 'NVD',
+                url: 'https://nvd.nist.gov/vuln/detail/%s',
+                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAYFBMVEUAAAAKCgopKSlAQUEEBASmpqfi4uI6OjqIiYloaGgNDQ01NTWVlZUyMzPDxMTQ0dGur69/f4C3t7h2d3cfICBwcXFfX2AaGhvLy8tTU1S9vb0WFhZISEjY2NiioqKOj4+ZrMpyAAAAfUlEQVQYlVWOyxbCIAxEkzSURysFKRSRyv//pTuJ2eWemXMHALZ9AXkPfwQWv67RPlGAFNkGxvMHmCErTIFEKKpUi7omKGvVr+YmwE6wmz81vH1HnfUEdH+ab3UuxDz6MswhN1MbLosM2HUDNl64TCMot+jg8KNG6XZWWfcFx6UFlzmDbvYAAAAASUVORK5CYII='
             },{
                 name: 'Exploit-DB',
                 url: 'https://www.exploit-db.com/search?q=%s',
@@ -1104,6 +1116,10 @@
                 name: '爱企查',
                 url: 'https://aiqicha.baidu.com/s?q=%s',
                 favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAA3NCSVQICAjb4U/gAAABU0lEQVQokZWSzyvDcRzGXx+W0mrlIuIyZdlpuDhQ/oUlRI4OlOTq6uLALorawUGR3+VHzjKTo+2wIiy0kRxsK+Xnvo/L5jum1Z7Tp+d5XofPu8dIohxVlNUGHMVW+IKbJxBNtXR5SwKRO9qDkIFKyMIbuIhM0OouKCmvs1sxIv+CEumck0ipLyD6dXb105INMCn/vCTpetXab7Z23bpcljQ4K8dwERA6F6NKpKX4WnYT3R8rGbKW0eXKQ1r0KBz9DSweijFJyh549HCSC5NH2nJJYkBLBzkvf1aBZT/zMhgD8GmnuSt56uCV+wwN3inrpMt0hkE67TbGCfCFz1N0JcbVH5AkxdetvUZrp17bLi2hWFAFsoFIXPRqaEaPmYI8FtQcen/+MUzhliLXdEzzmYJq+MJpeNmAjxRVNfa3iscXjhJPgoXPQ1vL32n8A5RW2Wv9Bp9qJ5YEvYSKAAAAAElFTkSuQmCC'
+            },{
+                name: 'Crunchbase',
+                url: 'https://www.crunchbase.com/',
+                favicon: 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAR9JREFUOE/l088rJAAUB/DPHLZsSsg6zJZfpZbalPwoP2pPHIlYJXGmuHHgRHuQi8TfQE44bg4uysGvHJAIB3bMYRfloGFGmlIjs7MrN+/4en16fXsvkNMbi3l9xQLvAKgo5PKGw/CLQaXOYKyV3TNm1/4RyE7ncxZ759xFeQQOQmyfcvaH3zcJUOIGTeWMf48Ppn2geZL+Bnrq40gwk6F5ljafkERg5wft0+z/oq2K0CUNX4ncM7pASZC5PsqGkwCHE9SMEb6mLI/bCJ01hK6YWSY3g9URigeTAAONdFSzccK3L7RM0VVLdx2LW1QUxMOc+pkEeGxXFlH0iZV9Lq7IzyHjI6VBjsKsH/8lxFe8ROo7SIG+DRD9j9UDz2ZjD+Drf8EfGmwvAAAAAElFTkSuQmCC'
             },{
                 name: '公安部备案查询',
                 url: 'http://www.beian.gov.cn/portal/recordQuery',
